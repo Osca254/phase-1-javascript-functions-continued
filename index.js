@@ -1,12 +1,18 @@
 // code your solution here
-function saturdayFun(){
-    return("This Saturday, I want to roller-skate!");
-}saturdayFun();
-function mondayWork(){
-  return ("This Monday, I will go to the office.");
+function saturdayFun(fun = 'roller-skate') {
+  return `This Saturday, I want to ${fun}!`;
 }
-mondayWork();
+saturdayFun();
+function mondayWork(work = "go to the office") {
+  return `This Monday, I will ${work}.`;
+}
+console.log(mondayWork("work from home"));
 
-function wrapAdjective(){
-    
+function wrapAdjective(decoration = "*") {
+  return (adjective = "special") => {
+    return `You are ${decoration}${adjective}${decoration}!`;
+  };
 }
+// console.log(wrapAdjective()())
+const mindit= wrapAdjective()
+console.log(mindit());
